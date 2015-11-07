@@ -14,7 +14,7 @@ Impostare
 </property>
 ```
 
-Cosi facendo index imposterà i file eliminati come fisicamente eliminabili
+Cosi facendo index imposterà i file eliminati come fisicamente eliminabili dopo 0 giorni
 
 Nella cartella dei file di properties modificare
 ```
