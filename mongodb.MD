@@ -1,7 +1,7 @@
 Come coollegarsi ad mongodb come admin 
-
+```
 mongosh -u admin -p password123 --authenticationDatabase admin
-
+```
 // Seleziona il database su cui vuoi che l'utente lavori s enon esiste lo crea
 use test_db
 
