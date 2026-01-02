@@ -43,3 +43,32 @@ Questa policy fonisce i diritti sul bucket user1bucket (fare la stessa cosa per 
   ]
 }
 ```
+
+Esempio di docker-compose.yaml con minio e console web completa
+```
+services:
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio-server
+    ports:
+      - "9000:9000" # API Port
+      - "9001:9001" # Web Console Port
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"    
+    
+  opens3-console:
+    image: opens3/console:latest
+    ports:
+      - "9090:9090"
+    environment:
+      CONSOLE_MINIO_SERVER: "http://minio:9000" # Nome del servizio minio nel compose
+      CONSOLE_PBKDF_PASSPHRASE: "una-tua-chiave-segreta"
+      CONSOLE_PBKDF_SALT: "un-tuo-salt-casuale"
+
+volumes:
+  minio_data:
+```
