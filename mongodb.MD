@@ -29,5 +29,5 @@ db.users.insertOne({ nome: "Mario", ruolo: "Admin" })
 |readWrite|Può leggere e modificare i dati (il più usato per le app).|
 |dbAdmin|Può gestire indici e statistiche, ma non legge i dati.|
 |userAdmin|Può creare altri utenti sul database specifico.|
-|root,Permessi totali su tutto il sistema (da usare con cautela).|
+|root|Permessi totali su tutto il sistema (da usare con cautela).|
 
