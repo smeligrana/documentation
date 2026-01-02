@@ -7,7 +7,8 @@ Le operazioni vengono svolte tramite la console web completa
   * Creo le policy come da file policy.txt 
   * Creo gli utenti user1 e user 2 e ad ognuno associo la policy corrispondente. 
 
-'''
+Questa policy fonisce i diritti sul bucket user1bucket (fare la stessa cosa per user2bucket)
+```
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -41,4 +42,4 @@ Le operazioni vengono svolte tramite la console web completa
     }
   ]
 }
-'''
+```
