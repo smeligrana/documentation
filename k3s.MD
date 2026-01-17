@@ -19,6 +19,11 @@ Comandi utili per la gestione del cluster:
 k3d cluster start / stop lab-ubuntu
 ```
 
+Comandi kubectl
+```
+kubectl get pods -n longhorn-system
+```
+
 Per la gestione dello storage usiamo Longhorn che replica i dati su tutti i nodi, per installarlo su Ubuntu bisonga prima aver installato iSCSI e NFS
 
 ```
