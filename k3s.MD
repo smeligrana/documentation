@@ -13,3 +13,15 @@ k3d cluster create lab-ubuntu \
     --agents 2 \
     --port "8080:80@loadbalancer"
 ```
+
+Comandi utili per la gestione del cluster:
+```
+k3d cluster start / stop lab-ubuntu
+```
+
+Per la gestione dello storage usiamo Longhorn che replica i dati su tutti i nodi, per installarlo su Ubuntu bisonga prima aver installato iSCSI e NFS
+
+```
+sudo apt install -y open-iscsi nfs-common
+kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.5.1/deploy/longhorn.yaml
+```
