@@ -23,5 +23,6 @@ Per la gestione dello storage usiamo Longhorn che replica i dati su tutti i nodi
 
 ```
 sudo apt install -y open-iscsi nfs-common
+sudo systemctl enable --now iscsid
 kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.5.1/deploy/longhorn.yaml
 ```
