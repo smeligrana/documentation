@@ -12,6 +12,13 @@ k3d cluster create lab-ubuntu \
     --servers 1 \
     --agents 2 \
     --port "8080:80@loadbalancer"
+
+k3d cluster create mycluster \
+  --volume /etc/iscsi:/etc/iscsi \
+  --volume /sbin/iscsiadm:/sbin/iscsiadm \
+  --volume /lib/modules:/lib/modules \
+  --agents 2 \
+  --port "8080:80@loadbalancer"
 ```
 
 Comandi utili per la gestione del cluster:
